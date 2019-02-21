@@ -43,7 +43,7 @@ RUN wget http://www.imagemagick.org/Usage/scripts/imagick_type_gen && \
     find /usr/share/fonts/ -name '*.ttf' | perl imagick_type_gen -f - > ~/.magick/type.xml
 
 # Second stage: start a simpler image that doesn't have the dev packages
-FROM ruby:2.3 as ci
+FROM ruby:2.3
 
 # Copy the generated font list
 COPY --from=builder /root/.magick/type.xml /root/.magick/type.xml
