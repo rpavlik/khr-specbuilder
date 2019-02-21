@@ -57,8 +57,10 @@ RUN apt-get update -qq && \
     ghostscript \
     git \
     imagemagick \
+    jing \
     libpango1.0-0 \
     libreadline7 \
+    libxml2-utils \
     pdftk \
     poppler-utils \
     python-utidylib \
@@ -68,7 +70,9 @@ RUN apt-get update -qq && \
     python3-pillow \
     python3-pytest \
     python3-tabulate \
-    wget
+    trang \
+    wget \
+    xmlstarlet
 
 # Get clang-format-5.0
 RUN echo "deb http://apt.llvm.org/stretch/ llvm-toolchain-stretch-5.0 main" >> /etc/apt/sources.list.d/llvm.list
